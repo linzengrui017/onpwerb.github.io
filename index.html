@@ -83,8 +83,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##变量命名</p>
-<h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><ul>
+        <h2 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h2><h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><ul>
 <li>采用驼峰式命名</li>
 <li>使用读得出来的名称</li>
 <li>类名和对象名应该是名词或名词短语</li>
@@ -95,8 +94,7 @@
 <li>测试类命名以它要测试的类的名词开始，以Test结尾</li>
 <li>名词长短与其作用域大小相对应</li>
 </ul>
-<p>###注意事项 </p>
-<ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>不使用中文名称</li>
 <li>不使用小写字母l和大写字母O作为变量名</li>
 <li>不使用某些专门名词</li>
@@ -104,51 +102,41 @@
 <li>不以下划线或美元符号结束</li>
 </ul>
 <hr>
-<p>##函数</p>
-<p>###编写原则</p>
-<ul>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="编写原则"><a href="#编写原则" class="headerlink" title="编写原则"></a>编写原则</h3><ul>
 <li>要短小</li>
 <li>只做一件事  </li>
-<li>遵循向下规则<br>每个函数后面都跟着位于下一抽象层级的函数，这样在查看函数列表时，能够遵循抽象层级自顶向下读代码<br>###函数参数</li>
+<li>遵循向下规则<br>每个函数后面都跟着位于下一抽象层级的函数，这样在查看函数列表时，能够遵循抽象层级自顶向下读代码 <h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3></li>
 <li>函数参数尽量不要超过三个。<br>超过三个参数的，应该将其中一些参数封装为类。</li>
 <li>函数参数中不要传入布尔值。<br>布尔值为TRUE，函数执行一种逻辑；布尔值为FALSE，函数执行另一种逻辑。这样违背了一个函数只做一件事的原则。</li>
 <li>函数参数是0个或1个为最佳。<br>函数参数是2个时，可能在调用时，会搞错两个参数的顺序，尽量将二元函数转变为一元函数。</li>
 <li>函数参数中不要出现输出参数。</li>
 </ul>
-<p>###代码规范</p>
-<ul>
+<h3 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h3><ul>
 <li>使用异常替代返回错误码</li>
 <li>try-catch代码块，try部分的逻辑应该单独抽离出现形成一个函数。<br>不要将错误处理与正常流程混淆。</li>
 </ul>
 <hr>
-<p>##注释</p>
-<p>###对注释的使用理解</p>
-<ul>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="对注释的使用理解"><a href="#对注释的使用理解" class="headerlink" title="对注释的使用理解"></a>对注释的使用理解</h3><ul>
 <li>别给糟糕的代码写注释，重新把代码写整洁再写注释</li>
 <li>注释不能随着代码变更而随之变动，注释的位置要恰当</li>
 <li>代码可以维护，注释没法维护</li>
 <li>误导性、有错误的注释的代码，比没有注释的代码， 更糟糕</li>
 </ul>
-<p>###注意事项</p>
-<ul>
+<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
 <li>TODO注释要定期查看并删除<br>TODO注释的代码块，是程序员认为应该做，但由于某些原因目前还没做的工作。该代码块被搁置，需要并且也只能由写出该注释的人尽快处理。</li>
 <li>直接把代码注释掉是一种讨厌的做法，不能这么做<br>其他人不敢删除注释掉的代码，以为代码依然放在那里，一定有其原因，而且这段代码很重要，不能删除。<br>不需要的代码，直接删除，删除掉的代码可以用git等版本控制工具进行恢复。</li>
 </ul>
 <hr>
-<p>##格式</p>
-<p>###代码格式原则</p>
-<ul>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><h3 id="代码格式原则"><a href="#代码格式原则" class="headerlink" title="代码格式原则"></a>代码格式原则</h3><ul>
 <li>垂直方向上，要有必要的空白行，可以区分不同的代码块</li>
 <li>水平方向上，要有必要的缩进</li>
 </ul>
-<p>###规范</p>
-<ul>
+<h3 id="规范-1"><a href="#规范-1" class="headerlink" title="规范"></a>规范</h3><ul>
 <li>实体变量应该在类的顶部声明</li>
 <li>有相同命名模式的函数，即使没有互相调用，也应该放在一起</li>
 </ul>
 <hr>
-<p>##错误处理</p>
-<ul>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><ul>
 <li>不要返回null值</li>
 <li>别传递null值</li>
 </ul>
@@ -157,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/onpwerb/onpwerb.github.io/2017/04/18/springboot/" data-id="cj1n8q7lz0001uotkmazg34qm" class="article-share-link">Share</a>
+      <a data-url="https://github.com/onpwerb/onpwerb.github.io/2017/04/18/springboot/" data-id="cj1n93d0q00007otkbx6gujws" class="article-share-link">Share</a>
       
       
     </footer>
@@ -202,7 +190,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.com/onpwerb/onpwerb.github.io/2017/04/18/hello-world/" data-id="cj1n8q7ll0000uotkw01i7m49" class="article-share-link">Share</a>
+      <a data-url="https://github.com/onpwerb/onpwerb.github.io/2017/04/18/hello-world/" data-id="cj1n93d1200017otkhylmdv27" class="article-share-link">Share</a>
       
       
     </footer>
