@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Onpwerb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Onpwerb">
+<meta property="og:url" content="https://github.com/onpwerb/onpwerb.github.io/index.html">
+<meta property="og:site_name" content="Onpwerb">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Onpwerb">
+  
+    <link rel="alternate" href="/atom.xml" title="Onpwerb" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Onpwerb</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://github.com/onpwerb/onpwerb.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-springboot" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/18/springboot/" class="article-date">
+  <time datetime="2017-04-18T07:04:04.000Z" itemprop="datePublished">2017-04-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/18/springboot/">springboot</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##<strong>变量命名</strong></p>
+<h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><ul>
+<li>采用驼峰式命名</li>
+<li>使用读得出来的名称</li>
+<li>类名和对象名应该是名词或名词短语</li>
+<li>方法名应该是动词或动词短语</li>
+<li>常量命名全部大写</li>
+<li>抽象类命名采用Abstract或Base开头</li>
+<li>异常类命名使用Exception结尾</li>
+<li>测试类命名以它要测试的类的名词开始，以Test结尾</li>
+<li>名词长短与其作用域大小相对应</li>
+</ul>
+<p>###注意事项 </p>
+<ul>
+<li>不使用中文名称</li>
+<li>不使用小写字母l和大写字母O作为变量名</li>
+<li>不使用某些专门名词</li>
+<li>不以下划线或美元符号开始</li>
+<li>不以下划线或美元符号结束</li>
+</ul>
+<hr>
+<p>##<strong>函数</strong></p>
+<p>###编写原则</p>
+<ul>
+<li>要短小</li>
+<li>只做一件事  </li>
+<li>遵循向下规则<br>每个函数后面都跟着位于下一抽象层级的函数，这样在查看函数列表时，能够遵循抽象层级自顶向下读代码<br>###函数参数</li>
+<li>函数参数尽量不要超过三个。<br>超过三个参数的，应该将其中一些参数封装为类。</li>
+<li>函数参数中不要传入布尔值。<br>布尔值为TRUE，函数执行一种逻辑；布尔值为FALSE，函数执行另一种逻辑。这样违背了一个函数只做一件事的原则。</li>
+<li>函数参数是0个或1个为最佳。<br>函数参数是2个时，可能在调用时，会搞错两个参数的顺序，尽量将二元函数转变为一元函数。</li>
+<li>函数参数中不要出现输出参数。</li>
+</ul>
+<p>###代码规范</p>
+<ul>
+<li>使用异常替代返回错误码</li>
+<li>try-catch代码块，try部分的逻辑应该单独抽离出现形成一个函数。<br>不要将错误处理与正常流程混淆。</li>
+</ul>
+<hr>
+<p>##<strong>注释</strong></p>
+<p>###对注释的使用理解</p>
+<ul>
+<li>别给糟糕的代码写注释，重新把代码写整洁再写注释</li>
+<li>注释不能随着代码变更而随之变动，注释的位置要恰当</li>
+<li>代码可以维护，注释没法维护</li>
+<li>误导性、有错误的注释的代码，比没有注释的代码， 更糟糕</li>
+</ul>
+<p>###注意事项</p>
+<ul>
+<li>TODO注释要定期查看并删除<br>TODO注释的代码块，是程序员认为应该做，但由于某些原因目前还没做的工作。该代码块被搁置，需要并且也只能由写出该注释的人尽快处理。</li>
+<li>直接把代码注释掉是一种讨厌的做法，不能这么做<br>其他人不敢删除注释掉的代码，以为代码依然放在那里，一定有其原因，而且这段代码很重要，不能删除。<br>不需要的代码，直接删除，删除掉的代码可以用git等版本控制工具进行恢复。</li>
+</ul>
+<hr>
+<p>##<strong>格式</strong></p>
+<p>###代码格式原则</p>
+<ul>
+<li>垂直方向上，要有必要的空白行，可以区分不同的代码块</li>
+<li>水平方向上，要有必要的缩进</li>
+</ul>
+<p>###规范</p>
+<ul>
+<li>实体变量应该在类的顶部声明</li>
+<li>有相同命名模式的函数，即使没有互相调用，也应该放在一起</li>
+</ul>
+<hr>
+<p>##<strong>错误处理</strong></p>
+<ul>
+<li>不要返回null值</li>
+<li>别传递null值</li>
+</ul>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/onpwerb/onpwerb.github.io/2017/04/18/springboot/" data-id="cj1n85nwm0000potklh8rwqwo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/18/hello-world/" class="article-date">
+  <time datetime="2017-04-18T06:33:27.250Z" itemprop="datePublished">2017-04-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/18/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://github.com/onpwerb/onpwerb.github.io/2017/04/18/hello-world/" data-id="cj1n85nwz0001potkhtuivowq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/18/springboot/">springboot</a>
+          </li>
+        
+          <li>
+            <a href="/2017/04/18/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Linzengrui<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
